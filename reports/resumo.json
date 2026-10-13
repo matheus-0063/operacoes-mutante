@@ -1,0 +1,183 @@
+{
+  "data": "2026-10-13",
+  "ambiente": {
+    "node": "v24.8.0",
+    "jest": "29.7.0",
+    "stryker": "9.6.1"
+  },
+  "fonteSha256": "169b5061f5fb2b795009a3968912931bbb880e97e509883231c0dcc3c36d5810",
+  "inicial": {
+    "testes": 50,
+    "cobertura": {
+      "lines": {
+        "total": 74,
+        "covered": 73,
+        "skipped": 0,
+        "pct": 98.64
+      },
+      "statements": {
+        "total": 96,
+        "covered": 82,
+        "skipped": 0,
+        "pct": 85.41
+      },
+      "functions": {
+        "total": 53,
+        "covered": 53,
+        "skipped": 0,
+        "pct": 100
+      },
+      "branches": {
+        "total": 34,
+        "covered": 20,
+        "skipped": 0,
+        "pct": 58.82
+      },
+      "branchesTrue": {
+        "total": 0,
+        "covered": 0,
+        "skipped": 0,
+        "pct": "Unknown"
+      }
+    },
+    "mutacao": {
+      "total": 213,
+      "Killed": 154,
+      "Timeout": 3,
+      "Survived": 44,
+      "NoCoverage": 12,
+      "detectados": 157,
+      "score": 73.70892018779342
+    }
+  },
+  "final": {
+    "testes": 105,
+    "cobertura": {
+      "lines": {
+        "total": 74,
+        "covered": 74,
+        "skipped": 0,
+        "pct": 100
+      },
+      "statements": {
+        "total": 96,
+        "covered": 96,
+        "skipped": 0,
+        "pct": 100
+      },
+      "functions": {
+        "total": 53,
+        "covered": 53,
+        "skipped": 0,
+        "pct": 100
+      },
+      "branches": {
+        "total": 34,
+        "covered": 34,
+        "skipped": 0,
+        "pct": 100
+      },
+      "branchesTrue": {
+        "total": 0,
+        "covered": 0,
+        "skipped": 0,
+        "pct": "Unknown"
+      }
+    },
+    "mutacao": {
+      "total": 213,
+      "Killed": 205,
+      "Timeout": 3,
+      "Survived": 5,
+      "NoCoverage": 0,
+      "detectados": 208,
+      "score": 97.65258215962442
+    }
+  },
+  "ganhoPontosPercentuais": 23.94366197183099,
+  "metaBrutaSuperada": false,
+  "scoreAjustadoPorEquivalentes": 100,
+  "aviso": "O score ajustado é uma análise complementar; não substitui o score bruto emitido pelo Stryker. Amostras apoiam a justificativa, mas não provam equivalência por si só.",
+  "equivalentes": [
+    {
+      "id": "28",
+      "linha": 19,
+      "tipo": "ConditionalExpression",
+      "replacement": "false",
+      "justificativa": "Sem o retorno antecipado de fatorial(0) ou fatorial(1), resultado começa em 1 e o laço não executa; a saída continua 1.",
+      "amostrasVerificadas": 171,
+      "dominio": "números inteiros não negativos"
+    },
+    {
+      "id": "29",
+      "linha": 19,
+      "tipo": "LogicalOperator",
+      "replacement": "n === 0 && n === 1",
+      "justificativa": "A conjunção n === 0 && n === 1 nunca é verdadeira; para 0 e 1 o laço não executa e a saída continua 1.",
+      "amostrasVerificadas": 171,
+      "dominio": "números inteiros não negativos"
+    },
+    {
+      "id": "30",
+      "linha": 19,
+      "tipo": "ConditionalExpression",
+      "replacement": "false",
+      "justificativa": "Desativar somente n === 0 faz fatorial(0) chegar ao acumulador 1 sem executar o laço.",
+      "amostrasVerificadas": 171,
+      "dominio": "números inteiros não negativos"
+    },
+    {
+      "id": "32",
+      "linha": 19,
+      "tipo": "ConditionalExpression",
+      "replacement": "false",
+      "justificativa": "Desativar somente n === 1 faz fatorial(1) chegar ao acumulador 1 sem executar o laço.",
+      "amostrasVerificadas": 171,
+      "dominio": "números inteiros não negativos"
+    },
+    {
+      "id": "135",
+      "linha": 84,
+      "tipo": "ConditionalExpression",
+      "replacement": "false",
+      "justificativa": "O reduce de um array vazio, com valor inicial 1, já retorna 1; o retorno antecipado é redundante para arrays comuns.",
+      "amostrasVerificadas": 6,
+      "dominio": "arrays comuns de números com reduce padrão"
+    }
+  ],
+  "criticos": [
+    {
+      "id": "177",
+      "linha": 104,
+      "tipo": "EqualityOperator",
+      "replacement": "a >= b",
+      "statusInicial": "Survived",
+      "statusFinal": "Killed",
+      "killedBy": [
+        "81"
+      ]
+    },
+    {
+      "id": "193",
+      "linha": 109,
+      "tipo": "MethodExpression",
+      "replacement": "[...numeros]",
+      "statusInicial": "Survived",
+      "statusFinal": "Killed",
+      "killedBy": [
+        "97"
+      ]
+    },
+    {
+      "id": "156",
+      "linha": 93,
+      "tipo": "ArithmeticOperator",
+      "replacement": "celsius / 9",
+      "statusInicial": "Survived",
+      "statusFinal": "Killed",
+      "killedBy": [
+        "91"
+      ]
+    }
+  ]
+}

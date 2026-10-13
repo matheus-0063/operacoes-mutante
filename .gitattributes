@@ -1,0 +1,2 @@
+*.pdf binary
+reports/mutation/**/*.html -whitespace

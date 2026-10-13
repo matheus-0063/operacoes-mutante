@@ -1,3 +1,7 @@
 node_modules/
 coverage/
-package-lock.json
+.stryker-tmp/
+tmp/
+.venv/
+__pycache__/
+.DS_Store
